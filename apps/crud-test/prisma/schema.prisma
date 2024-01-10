@@ -17,3 +17,9 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model EndUser {
+  createdAt DateTime @default(now())
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  updatedAt DateTime @updatedAt
+}
